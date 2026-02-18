@@ -1,9 +1,0 @@
-id: slack_create_channel
-namespace: company.team
-
-tasks:
-  - id: close_dm
-    type: io.kestra.plugin.slack.app.conversations.Rename
-    token: "{{ secret('SLACK_TOKEN') }}"
-    channel: "C07CGRDLBQW"
-    name: "new-channel-name"
