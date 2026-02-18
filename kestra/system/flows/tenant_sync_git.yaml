@@ -1,0 +1,18 @@
+id: tenant_sync_git
+namespace: system
+tasks:
+  - id: sync
+    type: io.kestra.plugin.git.TenantSync
+    sourceOfTruth: KESTRA
+    whenMissingInSource: DELETE
+    protectedNamespaces:
+      - system
+    url: https://github.com/pradumna-saraf/test22
+    username: pradumna-saraf
+    password: "{{secret('GH')}}"
+    branch: main
+    gitDirectory: kestra
+    kestraUrl: "http://localhost:8080"
+    auth:
+      username: "psaraf@kestra.io"
+      password: "Kestra@123"
