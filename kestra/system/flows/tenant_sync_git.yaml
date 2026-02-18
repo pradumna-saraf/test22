@@ -5,7 +5,7 @@ tasks:
     type: io.kestra.plugin.git.TenantSync
     sourceOfTruth: KESTRA
     whenMissingInSource: DELETE
-    onInvalidSyntax: WARN
+    onInvalidSyntax: SKIP
     protectedNamespaces:
       - system
     url: https://github.com/pradumna-saraf/test22
